@@ -1,0 +1,50 @@
+This is one of the most easiest problem you will ever code.
+Mr. Bournville loves programming and he likes to face new programming challenges. After completing many challenges he has now given you one challenge which is one of his favourites. 
+He has given you a list of N random integers and he wants you to find the integer which has the maximum frequency in the given list.Being a programmer himself, he had made this task a challenge for you and 
+he will calculate your score for this task using a formula.Formula for calculating the score : (max_score) - (number of characters in your code/15.0)Mr. Bournville already has a solution for this but he is not satisfied with his solution. 
+He wants you to write a shortest possible code for this task. In case Frequency of two numbers is same print the smaller one
+
+Input:
+First line of input contains N, number of integers.
+Second line will contains N spaces separated integers.
+
+Output:
+Print the most frequent integer.
+
+Contraints:
+3<=N<=104
+-106<=Integer<=106
+
+
+#include<iostream>
+#include<algorithm>
+using namespace std;
+int main()
+{
+long long n,i,j,maxval;
+cin>>n;
+long int arr[n],max=0,count=0;
+for(i=0;i<n;i++)
+{
+cin>>arr[i];
+}
+sort(arr,arr+n);
+for(i=0;i<n;i++)
+{
+count=0;
+for(j=0;j<n;j++)
+{
+if(arr[i]==arr[j])
+{
+count++;
+}
+}
+if(count>max)
+{
+maxval=arr[i];
+max=count;
+}
+}
+cout<<maxval<<"\n";
+return 0;
+}
