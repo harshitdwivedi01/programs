@@ -26,7 +26,7 @@ class HighLow{
 				a[p] = temp;
 			}
 		}
-		
-			System.out.println(a[n-1]+"  "+ a[0]);
+		      System.out.println(" ");
+			System.out.println("largest "+ a[n-1]+ " smallest "+ a[0]);
 	}
 }
